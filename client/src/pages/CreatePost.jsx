@@ -25,7 +25,7 @@ const CreatePost = () => {
 
         // step 2 : fetch image from openai api server
         const response = await fetch(                      //response
-          'http://localhost:8080/api/v1/dalle',
+          'https://dall-e-clone-2sgx.onrender.com/api/v1/dalle',
           {
             method : 'POST' , 
             headers : {
@@ -60,7 +60,7 @@ const CreatePost = () => {
     if(form.photo && form.prompt){
       setLoading(true);
       try{
-        const response = await fetch('http://localhost:8080/api/v1/post' , {
+        const response = await fetch('https://dall-e-clone-2sgx.onrender.com/api/v1/post' , {
           method : 'POST' , 
           headers : {
             'Content-Type': 'application/json' , 
